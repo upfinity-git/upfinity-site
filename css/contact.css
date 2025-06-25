@@ -28,7 +28,7 @@ nav a {
 }
 
 .contact-container {
-  max-width: 900px;
+  max-width: 600px;
   margin: 50px auto;
   background: white;
   padding: 40px;
@@ -81,13 +81,32 @@ form textarea {
 }
 
 footer {
-  background: #2a2b3f;
+  background: #000000;
   color: white;
-  padding: 20px 30px;
-  text-align: center;
+  padding: 0px 10px;
+  }
+  
+  .footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  }
+  
+  .footer-links {
+  margin-right: 20px; /* 👈 Pushes links container closer to right */
+  }
+  
+  .footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px; /* reduced from 30px for tighter spacing */
   font-size: 14px;
-  margin-top: 60px;
-}
+  }
+  
+  .footer-links a:hover {
+  text-decoration: overline;
+  }
 
 @media (max-width: 600px) {
   .services {
