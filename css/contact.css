@@ -1,69 +1,174 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us | Upfinity</title>
-  <link rel="stylesheet" href="css/contact.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="icon" type="image/png" href="favicon.png">
-</head>
-<body>
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #f8f8f8;
+  color: #2a2b3f;
+}
 
-  <!-- Header -->
-  <header>
-    <div>
-      <a href="index.html"><img src="images/name.png" alt="Upfinity" class="up-name" style="width: 140px; height: 32px;"></a>
-    </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="index.html#services">Services</a>
-      <a href="index.html#about">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+/* Header */
+header {
+  background: linear-gradient(to right, #30bd9b, #885dd1);
+  color: white;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
-  <div class="contact-container">
-    <h1>Contact Us</h1>
-    <h2>To elevate your brand with us</h2>
-  
-    <div class="services-checkboxes">
-      <label><input type="checkbox" name="webdev"> Web Development</label>
-      <label><input type="checkbox" name="digmar"> Digital Marketing</label>
-      <label><input type="checkbox" name="analty"> Analytics</label>
-      <label><input type="checkbox" name="smm"> Social Media Marketing</label>
-      <label><input type="checkbox" name="poster"> Poster and Creative Design</label>
-      <label><input type="checkbox" name="logo"> Logo and Brand Identity</label>
-    </div>
-  
-    <form action="/submit" method="post">
-      <label for="name">Name *</label>
-      <input id="name" name="name" type="text" placeholder="Let us know who you are" required>
-  
-      <label for="number">Number *</label>
-      <input type="tel" id="number" name="number" pattern="[0-9]{10}" placeholder="Leave your number here" required>
-  
-      <label for="mail">E-mail *</label>
-      <input type="email" id="mail" name="mail" placeholder="We will never spam you!" required>
-  
-      <label for="companyname">About your Company</label>
-      <textarea id="companyname" name="companyname" placeholder="Tell us your company name"></textarea>
-  
-      <button class="submit-btn" type="submit">Get a Quote</button>
-    </form>
-  </div>
-  
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
 
-  <!-- Footer -->
-  <footer id="contact">
-    <div class="footer-container">
-      <p class="copyright">© Upfinity. All rights reserved.</p>
-      <div class="footer-links">
-        <a href="https://upfinity-git.github.io/upfinity-site/">Home</a>
-        <a href="contact.html">Contact Us</a>
-      </div>
-    </div>
-  </footer>
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 600;
+}
 
-</body>
-</html>
+/* Contact Section */
+.contact-container {
+  max-width: 700px;
+  margin: 50px auto;
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.contact-container h1 {
+  font-size: 32px;
+  color: #30bd9b;
+  margin-bottom: 10px;
+}
+
+.contact-container h2 {
+  font-weight: 400;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+/* Neatly Aligned Checkboxes Section */
+.services-checkboxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+  margin-bottom: 25px;
+  padding: 10px 0;
+}
+
+.services-checkboxes label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: #f0f0f0;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.services-checkboxes input[type="checkbox"] {
+  accent-color: #30bd9b;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.services-checkboxes label:hover {
+  background: linear-gradient(to right, #30bd9b, #885dd1);
+  color: white;
+}
+
+/* Form Elements */
+form label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: 600;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.submit-btn {
+  margin-top: 25px;
+  background: linear-gradient(to right, #30bd9b, #885dd1);
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background: #000000;
+  color: white;
+  padding: 0px 10px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  margin-right: 20px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: overline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .services {
+    flex-direction: column;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav a {
+    margin: 5px 10px;
+  }
+
+  .services-checkboxes {
+    flex-direction: column;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
