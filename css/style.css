@@ -64,6 +64,19 @@ nav a {
 }
 
 .card {
+  transition: 0.1s ease;
+  cursor: pointer;
+}
+
+.features:hover > :not(:hover) {
+  opacity: 0.3;
+}
+
+.card:hover{
+  transform: scale(11.1);
+}
+
+.card {
   background: white;
   padding: 20px;
   border-radius: 12px;
