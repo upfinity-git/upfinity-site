@@ -6,12 +6,15 @@
   <title>Contact Us | Upfinity</title>
   <link rel="stylesheet" href="css/contact.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
 
   <!-- Header -->
   <header>
-    <a href="index.html"> <div class="logo">UPFINITY</div></a>
+    <div>
+      <a href="index.html"><img src="images/name.png" alt="Upfinity" class="up-name" style="width: 140px; height: 32px;"></a>
+    </div>
     <nav>
       <a href="index.html">Home</a>
       <a href="index.html#services">Services</a>
@@ -49,7 +52,7 @@
       <label for=" --Logo">Logo and Brand Identity</label>
     <input id="logo" name="logo" type="checkbox">
 
-    <form action="https://formspree.io/f/manjpyol" method="post">
+    <form action="/submit" method="post">
       <label for="name">Name *</label>
       <input id="name" name="name" type="text" placeholder="Let us know who you are" required>
 
@@ -67,8 +70,14 @@
   </div>
 
   <!-- Footer -->
-  <footer>
-    © Upfinity. All rights reserved.
+  <footer id="contact">
+    <div class="footer-container">
+      <p class="copyright">© Upfinity. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="https://upfinity-git.github.io/upfinity-site/">Home</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
   </footer>
 
 </body>
