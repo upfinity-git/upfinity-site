@@ -1,3 +1,16 @@
+/* ensuring all content respects screen boundaries*/
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+/*---------------------*/
+
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -170,5 +183,70 @@ footer {
     flex-direction: column;
     gap: 10px;
     text-align: center;
+  }
+}
+
+/* 🔧 Global Layout Fix */
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 🔧 Form Container on Small Devices */
+@media (max-width: 768px) {
+  .contact-container {
+    margin: 30px 20px;
+    padding: 30px 20px;
+  }
+}
+
+/* 🔧 Checkbox and Input Layout */
+@media (max-width: 600px) {
+  .services-checkboxes {
+    grid-template-columns: 1fr;
+  }
+
+  form label,
+  form input,
+  form textarea {
+    font-size: 14px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+  }
+}
+
+/* 🔧 Header & Navigation */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  nav a {
+    margin: 10px 8px;
+    display: inline-block;
+  }
+}
+
+/* 🔧 Footer */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .footer-links a {
+    margin: 5px 10px;
   }
 }
