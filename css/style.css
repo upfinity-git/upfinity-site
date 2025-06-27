@@ -1,3 +1,16 @@
+/* ensuring all content respects screen boundaries*/
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+/*---------------------*/
+
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -14,8 +27,6 @@ header {
   align-items: center;
   flex-wrap: wrap;
 }
-
-
 
 nav a {
   color: white;
@@ -66,7 +77,7 @@ nav a {
 }
 
 .card {
-  transition: 0.1s ease;
+  transition: 0s ease;
   cursor: pointer;
 }
 
@@ -75,7 +86,7 @@ nav a {
 }
 
 .card:hover{
-  transform: scale(11.1);
+  transform: scale(1.05);
 }
 
 .card {
@@ -83,7 +94,7 @@ nav a {
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  width: 300px;
+  width: 400px;
 }
 
 .card img {
@@ -201,4 +212,129 @@ gap: 10px;
 .footer-links a {
 margin: 0 10px;
 }
+}
+
+
+/* 🔧 Responsive Enhancement - Global */
+
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 🔧 Hero Section */
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .hero img {
+    max-width: 90%;
+    margin-top: 20px;
+  }
+}
+
+/* 🔧 Services Cards */
+@media (max-width: 992px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .features:hover > :not(:hover) {
+    opacity: 1 !important;
+  }
+
+  .card:hover {
+    transform: none !important;
+  }
+}
+
+/* 🔧 About Section */
+@media (max-width: 992px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .about-text, .about-image {
+    width: 100%;
+  }
+
+  .about-text ul {
+    padding-left: 0;
+  }
+
+  .about-text ul li {
+    text-align: left;
+    margin-left: 10px;
+  }
+}
+
+/* 🔧 Header & Navigation */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 10px;
+  }
+}
+
+/* 🔧 Quote Section Image + Text */
+@media (max-width: 768px) {
+  section[data-aos="fade-right"] {
+    flex-direction: column !important;
+    padding: 20px;
+  }
+
+  section[data-aos="fade-right"] img {
+    width: 100%;
+    height: auto;
+  }
+
+  section[data-aos="fade-right"] div {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* 🔧 Footer */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .footer-links {
+    margin: 0;
+  }
+
+  .footer-links a {
+    margin: 5px 10px;
+    display: inline-block;
+  }
 }
