@@ -19,7 +19,7 @@ body {
 }
 
 header {
-  background: linear-gradient(to right, #30bd9b, #885dd1);
+  background: linear-gradient(to right, #4b30bd, #885dd1);
   color: white;
   padding: 20px 40px;
   display: flex;
@@ -40,7 +40,7 @@ nav a {
   justify-content: space-between;
   align-items: center;
   padding: 35px 30px;
-  background: linear-gradient(to right, #30bd9b, #885dd1);
+  background: linear-gradient(to right, #4b30bd, #885dd1);
   color: white;
   flex-wrap: wrap;
 }
@@ -77,7 +77,7 @@ nav a {
 }
 
 .card {
-  transition: 0s ease;
+  transition: 1s ease;
   cursor: pointer;
 }
 
@@ -87,6 +87,7 @@ nav a {
 
 .card:hover{
   transform: scale(1.05);
+  transition: 0.5s;
 }
 
 .card {
@@ -105,7 +106,7 @@ nav a {
 
 .card h3 {
   margin-top: 10px;
-  color: #30bd9b;
+  color: #4b30bd;
 }
 
 #about {
@@ -152,10 +153,17 @@ nav a {
   display: inline-block;
   margin-top: 20px;
   padding: 10px 20px;
-  background: linear-gradient(to right, #30bd9b, #885dd1);
+  background: linear-gradient(to right, #7137d4, #953eed);
   color: #fff;
   border-radius: 25px;
   text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-about:hover {
+  background: linear-gradient(to right, #7137d4, #953eed);
+  transform:scale(1.1);
+  transition: 0.3s;
 }
 
 .about-image {
