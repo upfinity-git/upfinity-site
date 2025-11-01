@@ -14,13 +14,13 @@ html, body {
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
-  background: linear-gradient(to right, #30bd9b, #885dd1);
+  background: linear-gradient(to right, #7137d4, #5d87e1);
   color: #2a2b3f;
 }
 
 /* Header */
 header {
-  background: linear-gradient(to right, #30bd9b, #885dd1);
+  background: linear-gradient(to right, #7137d4, #5d87e1);
   color: white;
   padding: 20px 30px;
   display: flex;
@@ -93,7 +93,7 @@ nav a {
 }
 
 .services-checkboxes label:hover {
-  background: linear-gradient(to right, #30bd9b, #885dd1);
+  background: linear-gradient(to right, #7137d4, #5d87e1);
   color: white;
 }
 
@@ -121,7 +121,7 @@ form textarea {
 
 .submit-btn {
   margin-top: 25px;
-  background: linear-gradient(to right, #30bd9b, #885dd1);
+  background: linear-gradient(to right, #7137d4, #5d87e1);
   color: white;
   border: none;
   padding: 14px 30px;
